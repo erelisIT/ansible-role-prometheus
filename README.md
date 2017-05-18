@@ -1,5 +1,5 @@
-Role Name
-=========
+Prometheus
+==========
 
 Ansible role for installing and configuring Prometheus.
 
