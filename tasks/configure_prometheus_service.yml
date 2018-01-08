@@ -1,0 +1,16 @@
+---
+- name: configure service
+  template:
+    src: prometheus.service.j2
+    dest: /etc/systemd/system/prometheus.service
+    owner: root
+    group: root
+    mode: 0755
+
+- name: start and enable prometheus service
+  systemd:
+    daemon_reload: yes
+    name: prometheus
+    state: restarted
+    enabled: True
+

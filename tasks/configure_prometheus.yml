@@ -1,0 +1,11 @@
+---
+- file: path={{ prom_dir }}/prometheus/prometheus.yml state=absent
+
+- name: configure prometheus
+  template:
+    src: prometheus.yml.j2
+    dest: "{{ prom_config }}/prometheus.yml"
+    owner: root
+    group: root
+    mode: 0664
+

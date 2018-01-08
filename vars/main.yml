@@ -1,2 +1,8 @@
----
-# vars file for ansible-role-prometheus
+prom_dir: /opt/prometheus
+tarball: prometheus-{{ prometheus_version }}.linux-amd64.tar.gz
+untar_dir: prometheus-{{ prometheus_version }}.linux-amd64
+url_download:  https://github.com/prometheus/prometheus/releases/download/v{{ prometheus_version }}/{{ tarball }}
+
+prom_data: /var/lib/prometheus/data
+prom_config: /etc/prometheus/prometheus
+

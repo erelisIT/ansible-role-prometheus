@@ -1,2 +1,5 @@
 ---
-# defaults file for ansible-role-prometheus
+# defaults file for ansible-role-prometheus-node-exporter
+user: root
+prometheus_version: 1.7.1
+prometheus_sha256: 4779d5cf08c50ed368a57b102ab3895e5e830d6b355ca4bfecf718a034a164e0

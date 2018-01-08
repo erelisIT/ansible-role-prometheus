@@ -1,0 +1,14 @@
+# --- File managed by Ansible ---
+# /etc/systemd/system/prometheus.service
+[Unit]
+Description=Prometheus Server
+Documentation=https://prometheus.io/docs/introduction/overview/
+After=network-online.target
+
+[Service]
+User={{ user }}
+ExecStart={{ prom_dir }}/prometheus/prometheus -config.file={{ prom_config }}/prometheus.yml -storage.local.path={{ prom_data }}
+
+[Install]
+WantedBy=multi-user.target
+

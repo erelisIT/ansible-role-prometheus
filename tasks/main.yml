@@ -1,2 +1,5 @@
 ---
-# tasks file for ansible-role-prometheus
+- include: install_prometheus.yml
+- include: configure_prometheus.yml
+- include: configure_prometheus_service.yml
+
