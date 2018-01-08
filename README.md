@@ -31,4 +31,3 @@ The example of how to use the role in the playbook:
       roles:
          - { role: firewalld-prometheus-server }
          - { role: prometheus }
-
